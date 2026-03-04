@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>3D Ebook Flip</title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+
+<style>
+body{
+    margin:0;
+    background:#f4f4f4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+#flipbook{
+    width:800px;
+    height:600px;
+}
+
+iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+</style>
+</head>
+
+<body>
+
+<div id="flipbook">
+    <div>
+        <iframe src="book.pdf"></iframe>
+    </div>
+</div>
+
+<script>
+$("#flipbook").turn({
+    width: 800,
+    height: 600,
+    autoCenter: true
+});
+</script>
+
+</body>
+</html>
